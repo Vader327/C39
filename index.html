@@ -8,13 +8,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
     <script src="p5.play.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
 
     <script>
       // Your web app's Firebase configuration
-      //add here
+      var firebaseConfig = {
+        apiKey: "AIzaSyAqprtDZuvXrBtCyvETQIGPO9iKmYlkus8",
+        authDomain: "carracing-bd177.firebaseapp.com",
+        databaseURL: "https://carracing-bd177.firebaseio.com",
+        projectId: "carracing-bd177",
+        storageBucket: "carracing-bd177.appspot.com",
+        messagingSenderId: "40579857747",
+        appId: "1:40579857747:web:b6c42a7ba71ec3fbeab5a6"
+      };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
     </script>
@@ -22,5 +29,8 @@
   </head>
   <body>
     <script src="sketch.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/player.js"></script>
   </body>
 </html>
