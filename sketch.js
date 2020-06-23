@@ -2,6 +2,7 @@ var database;
 var gameState = 0;
 var playerCount = 0;
 var form, player, game;
+var allPlayers = [];
 
 function setup(){
   createCanvas(500,500);
@@ -12,5 +13,13 @@ function setup(){
   game.start();
 }
 
-function draw(){  
+function draw(){
+  if(playerCount===4){
+    game.update(1);
+    gameState = 1;
+  }
+  if(gameState===1){
+    game.play();
+    clear();
+  }
 }
