@@ -3,9 +3,11 @@ var gameState = 0;
 var playerCount = 0;
 var form, player, game;
 var allPlayers = [];
+var car1,car2,car3,car4; 
+var cars = [];
 
 function setup(){
-  createCanvas(500,500);
+  createCanvas(displayWidth - 20, displayHeight - 30);
   database = firebase.database();
 
   game = new Game();
@@ -16,10 +18,11 @@ function setup(){
 function draw(){
   if(playerCount===4){
     game.update(1);
-    gameState = 1;
+    console.log(gameState);
+    //gameState = 1;
   }
   if(gameState===1){
-    game.play();
     clear();
+    game.play();
   }
 }

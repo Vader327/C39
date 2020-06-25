@@ -12,12 +12,12 @@ class Form{
     }
     display(){
         this.title.html("Car Racing Game");
-        this.title.position(100,0);
+        this.title.position(displayWidth/2 - 50,0);
 
         this.input.elt.placeholder = ("Enter Name");
-        this.input.position(130, 160);
+        this.input.position(displayWidth/2 - 40, displayHeight/2 - 80);
 
-        this.submit.position(250,200);
+        this.submit.position(displayWidth/2 + 30, displayHeight/2);
 
         this.submit.mousePressed(()=>{
             this.input.hide();
@@ -25,7 +25,7 @@ class Form{
 
             player.name = this.input.value();
             this.greeting.html("Hello " + player.name + "!");
-            this.greeting.position(130,160);
+            this.greeting.position(displayWidth/2 - 70, displayHeight/4);
 
             playerCount+=1;
             player.index = playerCount;
