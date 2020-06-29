@@ -4,6 +4,7 @@ class Form{
         this.input = createInput();
         this.submit = createButton("Play");
         this.title = createElement("h1");
+        this.reset = createButton("Reset");
     }
     hide(){
         this.input.hide();
@@ -16,6 +17,8 @@ class Form{
 
         this.input.elt.placeholder = ("Enter Name");
         this.input.position(displayWidth/2 - 40, displayHeight/2 - 80);
+
+        this.reset.position(displayWidth - 100, 20);
 
         this.submit.position(displayWidth/2 + 30, displayHeight/2);
 
@@ -31,6 +34,12 @@ class Form{
             player.index = playerCount;
             player.update();
             player.updateCount(playerCount);
+        })
+
+        this.reset.mousePressed(()=>{
+            game.update(0);
+            player.updateCount(0);
+            game.reset();
         })
     }
 }
